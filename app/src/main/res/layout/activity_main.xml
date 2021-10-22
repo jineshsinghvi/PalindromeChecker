@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
+    <!-- TextView is used to display text on screen  -->
     <TextView
         android:id="@+id/textViewStatus"
         android:layout_width="wrap_content"
@@ -31,6 +31,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.327" />
 
+    <!-- Using EditText to get the user Input  -->
     <EditText
         android:id="@+id/editTextInputWord"
         android:layout_width="wrap_content"

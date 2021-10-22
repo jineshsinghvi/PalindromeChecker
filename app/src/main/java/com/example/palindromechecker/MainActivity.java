@@ -9,7 +9,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-
+    // Declaring Variables
     private TextView textViewStatus;
     private EditText editTextInputWord;
 
@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Using findViewById-finds the particular view by Id
         textViewStatus = findViewById(R.id.textViewStatus);
         editTextInputWord = findViewById(R.id.editTextInputWord);
 
@@ -25,6 +26,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void buttonCheckPalindrome(View view){
 
+        /*
+         * Using charInput to get the Input from user
+         * converting it into text,string and lastly in array
+         */
         char[] charInput = editTextInputWord.getText().toString().toCharArray();
         int intLength = charInput.length;
         boolean isPalindrome = true;
@@ -36,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         if (isPalindrome){
+            // A small window gets popped on screen after declaring toast
             Toast.makeText(this, "Palindrome", Toast.LENGTH_SHORT).show();textViewStatus.setText("Palindrome");
         }
         else {
